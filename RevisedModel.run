@@ -1,0 +1,17 @@
+# Load the model and data
+reset;
+model RevisedModel.mod;
+data RevisedModelData.dat;
+option solver gurobi;
+
+# Solve for Objective 1: Minimize Damage
+objective Damage;
+solve;
+display Damage;  # Display value of the Damage objective
+display x;    # Display variable values
+
+# Solve for Objective 2: Minimize Cost
+objective Cost;
+solve;
+display Cost;    # Display value of the Cost objective
+display y;    # Display variable values

@@ -1,0 +1,91 @@
+set AllRegions:= Region1  Region2  Region3  Region4  Region5  Region6  Region7 Region8  Region9  Region10;
+set ACTIVITIES:= Reforestation Infrastructure_Repair Wildlife_Restoration;
+
+param Total_Budget := 50000;
+
+param Pi:=
+        Region1  0.54
+        Region2  0.68
+        Region3  0.72
+        Region4  0.80
+        Region5  0.75
+        Region6  0.65
+        Region7  0.77
+        Region8  0.73
+        Region9  0.61
+        Region10 0.70;
+
+param Di:=
+        Region1  3200
+        Region2  2500
+        Region3  2000
+        Region4  3000
+        Region5  1800
+        Region6  2100
+        Region7  1500
+        Region8  1700
+        Region9  2200
+        Region10 2400;
+
+param Ei:=
+      Region1    0.78
+      Region2    0.65
+      Region3    0.88
+      Region4    0.69
+      Region5    0.74
+      Region6    0.70
+      Region7    0.72
+      Region8    0.67
+      Region9    0.75
+      Region10   0.79;
+
+param Ci:=
+      Region1      40
+      Region2 	   41
+      Region3      31
+      Region4      33
+      Region5      37
+      Region6      32
+      Region7      42
+      Region8      33
+      Region9      31
+      Region10     32;
+
+param R:= 9;
+param Rr:= 1000;
+
+param Cij:        Reforestation       Infrastructure_Repair       Wildlife_Restoration:=
+       Region1            25						28							20
+       Region2            35                        25                          20
+       Region3            23                        22                          30
+       Region4 			  21                        35                          21
+       Region5 			  30                        27                          24
+       Region6 			  23                        28                          22
+       Region7		      29                        31                          25
+       Region8 		      23                        35                          28
+       Region9		      32                        30                          22
+       Region10 		  29                        28                          24;
+
+param Eij:         Reforestation       Infrastructure_Repair       Wildlife_Restoration:=
+      Region1 			0.87                  0.85                        0.82
+      Region2		    0.78                  0.70                        0.75
+      Region3		    0.81                  0.83                        0.78
+      Region4 			0.72                  0.78                        0.86
+      Region5 			0.86                  0.89                        0.81
+      Region6 			0.74                  0.87                        0.70
+      Region7 			0.88                  0.80                        0.73
+      Region8		    0.75                  0.74                        0.71
+      Region9 			0.83                  0.76                        0.87
+      Region10 		    0.70                  0.79                        0.70;
+
+param Pj:=
+      Reforestation			    0.85
+      Infrastructure_Repair 	0.75
+      Wildlife_Restoration      0.80;
+
+param Rj:=
+      Reforestation 			200
+      Infrastructure_Repair 	150
+      Wildlife_Restoration 	    180;
+
+
